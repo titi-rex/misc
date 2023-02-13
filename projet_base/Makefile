@@ -6,7 +6,7 @@
 #    By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/12 20:46:19 by tlegrand          #+#    #+#              #
-#    Updated: 2023/02/12 21:11:54 by tlegrand         ###   ########.fr        #
+#    Updated: 2023/02/13 23:31:55 by tlegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,8 @@ FTFLAGS		=	-L${DIR_LIBFT} -lft
 #	==============================	BASIC	==============================	#
 all		:	${NAME}
 
+bonus	:	${NAME_B}
+
 clean	:
 		@${RM} ${DIR_OBJS}
 		@$(MAKE) -C ${DIR_LIBFT} clean
@@ -80,7 +82,7 @@ ${NAME}			:	${LIBFT} ${DIR_OBJS} ${OBJS}
 				@${CC} ${CFLAGS} ${OBJS} ${FTFLAGS} -o ${NAME}
 				@printf "$(GREEN_LIGHT)${NAME} created !\n$(END)"
 
-bonus			:	{LIBFT} ${DIR_OBJS} ${OBJS_B}
+${NAME_B}		:	{LIBFT} ${DIR_OBJS} ${OBJS_B}
 				@${CC} ${CFLAGS} ${OBJS_B} ${FTFLAGS} -o ${NAME_B}
 				@printf "$(GREEN_LIGHT)${NAME_B} created !\n$(END)"
 
@@ -122,3 +124,7 @@ BLUE_LIGHT	=	\033[1;34m
 VIOLET		=	\033[1;35m
 CYAN		=	\033[1;36m
 WHITE		=	\033[1;37m
+END			=	\033[0m
+UNDERLINE	=	\033[4m
+REV			=	\033[7m
+ERASE		=	\033[2K\r
