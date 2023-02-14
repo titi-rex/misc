@@ -6,7 +6,7 @@
 #    By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/12 20:46:19 by tlegrand          #+#    #+#              #
-#    Updated: 2023/02/13 23:31:55 by tlegrand         ###   ########.fr        #
+#    Updated: 2023/02/14 20:02:19 by tlegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ ${DIR_OBJS}	:
 			@${MKDIR} ${DIR_OBJS}
 			
 nn			:
-			@norminette ${SRCS} ${SRCS_B} ${HEADER} ${HEADER_B}
+			@norminette $(sort ${SRCS} ${SRCS_B} ${HEADER} ${HEADER_B})
 
 $(LIBFT)	:	FORCE
 			@$(MAKE) -C ${DIR_LIBFT}
