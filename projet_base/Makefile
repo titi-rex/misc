@@ -6,7 +6,7 @@
 #    By: tlegrand <tlegrand@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/12 20:46:19 by tlegrand          #+#    #+#              #
-#    Updated: 2023/02/14 20:04:20 by tlegrand         ###   ########.fr        #
+#    Updated: 2023/03/01 15:32:30 by tlegrand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,4 +127,5 @@ WHITE		=	\033[1;37m
 END			=	\033[0m
 UNDERLINE	=	\033[4m
 REV			=	\033[7m
-ERASE		=	\033[2K\r
+ERASE		=	\033[2K
+RERASE		=	\r\033[2K
